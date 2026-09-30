@@ -2,6 +2,8 @@
 
 프롤로그 + 제1장 「결성」까지 플레이할 수 있는 모바일 웹 게임 프로토타입.
 
+▶ **플레이: [starterpack-master.github.io/idol-vn](https://starterpack-master.github.io/idol-vn/)** (폰 브라우저 권장 · 이어폰 권장)
+
 ```bash
 npm install
 npm run dev            # 개발 서버 → 폰에서 같은 와이파이로 http://<PC IP>:5173 접속
@@ -9,7 +11,13 @@ npm run build          # dist/ 정적 빌드 (Capacitor 등으로 앱 패키징 
 npm run lint           # 스크립트 정적 검사 (없는 씬/캐릭터/표정/배경 참조)
 npm run smoke          # 헤드리스 전체 자동 플레이 + 스크린샷(shots/)  ※ playwright 필요
 npm run export-script  # 스크립트 → docs/02·03 시나리오 문서 자동 생성
+npm run deploy         # lint → build → gh-pages 브랜치로 배포 (GitHub Pages)
+npm run check:live     # 배포된 페이지를 폰 화면으로 열어 실제 플레이 확인
 ```
+
+## 배포
+GitHub Pages가 `gh-pages` 브랜치(루트)를 서비스합니다. `gh-pages`는 빌드 결과물 전용 브랜치이니 병합하지 마세요.
+`npm run deploy`는 force push 없이 `gh-pages`에 새 커밋을 쌓고, 반영까지는 보통 1분 안쪽이 걸립니다.
 
 ## 조작
 - **탭**: 대사 넘기기 · **드래그 / 📱자이로**: 360° 둘러보기 (LOOK·GAZE·SEARCH 장면)

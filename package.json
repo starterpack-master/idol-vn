@@ -9,7 +9,8 @@
     "smoke": "vite build && node tools/smoke.mjs shots",
     "lint": "node tools/lint-story.mjs",
     "test:modes": "vite build && node tools/modes-test.mjs",
-    "deploy": "bash tools/deploy-pages.sh"
+    "deploy": "bash tools/deploy-pages.sh",
+    "check:live": "node tools/live-check.mjs https://starterpack-master.github.io/idol-vn/ shots"
   },
   "type": "module",
   "dependencies": {
