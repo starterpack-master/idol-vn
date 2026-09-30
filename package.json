@@ -1,0 +1,22 @@
+{
+  "name": "b1-idol-vn",
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "vite --host",
+    "build": "vite build",
+    "preview": "vite preview --host",
+    "export-script": "node tools/export-script.mjs",
+    "smoke": "vite build && node tools/smoke.mjs shots",
+    "lint": "node tools/lint-story.mjs",
+    "test:modes": "vite build && node tools/modes-test.mjs",
+    "deploy": "bash tools/deploy-pages.sh"
+  },
+  "type": "module",
+  "dependencies": {
+    "three": "^0.186.1"
+  },
+  "devDependencies": {
+    "playwright": "^1.63.0",
+    "vite": "^8.3.1"
+  }
+}
